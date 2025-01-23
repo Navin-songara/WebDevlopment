@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinator Selctors</title>
+    <style>
+        /* descendent selector (space) */
+        /* tag tag */
+        #fdiv p{
+            color: red;
+        }
+        /* ClassName tag */
+        .fspan h1{
+            background: pink;
+        }
+
+        /* child selector (>) */
+        div>p{
+            background: rgb(188,184,184);
+        }
+
+        /* adjacent sibling selector (+) */
+        div+p{
+            font-size: 40px;
+        }
+
+        /* general sibling selector (~) tilled operator*/
+
+        div~p{
+            border-bottom: 4px dotted gray;
+        }
+</style>
+</head>
+<body>
+    <span class="fspan"><h1>span1</h1></span>
+    <span><h1>span2</h1></span>
+    <span><h1>span3</h1></span>
+
+    <div id="fdiv">
+        <p>inside div: this i paragraph tag</p>
+        <span>
+            <p>inside div->span: this i paragraph tag</p>
+        </span>
+        <p>inside div: this i paragraph tag</p>
+        <p>inside div: this i paragraph tag</p>
+       
+    </div>
+    <p>outside div: this i paragraph tag</p>
+    <p>outside div: this i paragraph tag</p>
+    <span>111</span>  
+    <p>outside div: this i paragraph tag</p>
+
+    <div id="fdiv">
+        <p>inside div: this i paragraph tag</p>
+        <span>
+            <p>inside div->span: this i paragraph tag</p>
+        </span>
+        <p>inside div: this i paragraph tag</p>
+        <p>inside div: this i paragraph tag</p>
+       
+    </div>
+
+</body>
+</html>
