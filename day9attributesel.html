@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute selector</title>
+    <style>
+        input[type="text"],input[type="password"]{
+            border-bottom:2px solid gray;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+
+        }
+
+        input[type="text"]:hover,input[type="password"]:hover{
+            border-bottom:2px solid rgb(47, 47, 47);
+            border-top: none;
+            border-left: none;
+            border-right: none;
+
+        }
+
+        input[type="submit"]{
+            background: green;
+            border: 1px solid black;
+            border-radius: 10px;
+            color: #ffffff;
+        }
+        input[type="submit"]{
+            background: green;
+            border: 1px solid black;
+            border-radius: 10px;
+            color: #ffffff;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <form action="">
+        <label for="">username</label><br>
+        <input type="text"><br><br>
+        <label for="">password</label><br>
+        <input type="password"><br><br>
+        
+        <input type="submit"> 
+    </form>
+</body>
+</html>
