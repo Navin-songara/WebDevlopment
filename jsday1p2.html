@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <script>
+            function simpleinterest()
+            {
+                var p,r,t,si;
+                p=parseFloat(document.getElementById("tb1").value);
+                r=parseFloat(document.getElementById("tb2").value);
+                t=parseFloat(document.getElementById("tb3").value);
+                si=(p*r*t)/100;
+                document.getElementById("tb4").value=si;
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <h4>Calculate simpleinterest</h4>
+            <table border="1">
+                <tr>
+                    <td>Enter Principle Amuont</td>
+                    <td>
+                        <input type="text" id="tb1">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Enter Rate of interest</td>
+                    <td>
+                        <input type="text" id="tb2">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Enter Time</td>
+                    <td>
+                        <input type="text" id="tb3">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Results</td>
+                <td>
+                    <input type="text" id="tb4">
+                </td>
+                </tr>
+                <tr>
+                    <td>click here</td>
+                    <td>
+                        <button type="submit"onclick="simpleinterest()">Calculate</button>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </body>
+</html>
