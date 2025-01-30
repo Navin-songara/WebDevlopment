@@ -1,0 +1,45 @@
+<!-- calculate sum of digits of three digits number-->
+<html>
+    <head>
+        <script>
+            function digitSum()
+            {
+                
+                var n,h,t,u,sum;
+                n=parseInt(document.getElementById ("tb1").value);
+                h=parseInt(n/100);
+                t=(parseInt(n/10))%10;
+                u=n%10;
+                sum=h+t+u;
+                document.getElementById("tb2").value=sum;
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <h4>calculate sum of Digits</h4>
+            <table border="1">
+                <tr>
+                    <td>Enter three digits number</td>
+                    <td>
+                        <input type="text" id="tb1" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>result</td>
+                    <td>
+                        <input type="text" id="tb2" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Click Here</td>
+                    <td>
+                        <button type="submit" onclick="digitSum()">Sum</button>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </body>
+</html>
