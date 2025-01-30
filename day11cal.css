@@ -1,0 +1,15 @@
+body{
+    background: burlywood;
+}
+
+button{
+    color: aliceblue;
+    background: rebeccapurple;
+    border: 1px dashed white;    
+}
+
+button:hover{
+    color: aliceblue;
+    background: rgb(7, 0, 13);
+    border: 1px dashed rgb(229, 21, 21);    
+}
