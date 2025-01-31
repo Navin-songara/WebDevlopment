@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <script>
+            function FindmaxFun(){
+
+            var a,b,c;
+
+            a=parseInt(document.getElementById("tb1").value);
+            b=parseInt(document.getElementById("tb2").value);
+            c=parseInt(document.getElementById("tb3").value);
+
+            if(a>b&&a>c){
+                document.getElementById("tb4").value="value a is greater";
+            }
+            if(b>a&&b>c){
+                document.getElementById("tb4").value="value b is greater";
+            }
+            if(c>a&&c>b){
+                document.getElementById("tb4").value="value c is greater";
+            }
+            }
+        </script>
+    </head>
+    <center>
+        <h4>Max value</h4>
+        <table border="1">
+            
+            <tr>
+                <td>Enter value of a</td>
+                <td>
+                    <input type="text" id="tb1"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Enter value of b</td>
+                <td>
+                    <input type="text" id="tb2"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Enter value of b</td>
+                <td>
+                    <input type="text" id="tb3"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Result</td>
+                <td>
+                    <input type="text" id="tb4"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Click Here</td>
+                <td>
+                    <button type="submit"onclick="FindmaxFun()">Max value</button>
+                </td>
+            </tr>
+        </table>
+    </center>
+</html>
