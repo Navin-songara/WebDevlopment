@@ -1,0 +1,39 @@
+<!-- calculate factorial  -->
+ <html>
+    <head>
+        <script>
+            function factorialFun(){
+                var i,n,f=1;
+                n=parseInt(document.getElementById("tb1").value);
+                for(i=1;i<=n;i++){
+                    f=f*i;
+                }
+                document.getElementById("tb2").value=f;
+            }
+        </script>
+    </head>
+    <body>
+        <h4>Calculate Factorial</h4>
+        <table>
+            <tr>
+                <td>Enter Number</td>
+                <td>
+                    <input type="text" id="tb1">
+                </td>
+            </tr>
+            <tr>
+                <td>Result</td>
+                <td>
+                    <input type="text" id="tb2"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Click Here</td>
+                <td>
+                    <button type="submit"onclick="factorialFun()">Factorial</button>
+                </td>
+            </tr>
+        </table>
+    </body>
+ </html>

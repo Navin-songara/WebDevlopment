@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script>
+            function plndFun(){
+                var i,h,t,u,rev;
+                for(i=101;i<=200;i++){
+                    h=parseInt(i/100);
+                    t=(parseInt(i/10))%10;
+                    u=i%10;
+                    rev=(u*100)+(t*10)+(h*1);
+                    if(i==rev){
+                        document.write(i + "<br>");
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h4>Print Palindrom Number</h4>
+        <button type="submit"onclick="plndFun()">Palindrom Show</button>
+    </body>
+</html>
