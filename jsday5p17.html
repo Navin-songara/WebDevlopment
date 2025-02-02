@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <script>
+             function primeFun(){
+            var a;
+
+            a=parseInt(document.getElementById("tb1").value);
+            let prime = a > 1;
+
+            for (let i = 2; i * i <= a; i++) {
+                if (a % i === 0) {
+                    prime = false; 
+                }
+            }
+
+            if (prime) {
+                document.getElementById("tb2").value = "Number is Prime";
+            } else {
+                document.getElementById("tb2").value = "Number is Not Prime";
+            }
+        }
+        </script>
+    </head>
+    <center>
+        <h4>Max value</h4>
+        <table border="1">
+            
+            <tr>
+                <td>Enter value of a</td>
+                <td>
+                    <input type="text" id="tb1"/>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>Result</td>
+                <td>
+                    <input type="text" id="tb2" readonly/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Click Here</td>
+                <td>
+                    <button type="submit"onclick="primeFun()">Prime Number</button>
+                </td>
+            </tr>
+        </table>
+    </center>
+</html>

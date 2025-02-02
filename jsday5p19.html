@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Power Calculation</title>
+    <script>
+        function calculatePower() {
+            n = document.getElementById("n").value;
+            p = document.getElementById("p").value;
+            let result = n ** p; // using exponentiation operator
+            document.getElementById("result").innerText = result;
+        }
+    </script>
+
+</head>
+<body>
+
+    <h3>Calculate n<sup>p</sup></h3>
+    <label>Enter n: </label>
+    <input type="number" id="n">
+    <br><br>
+    <label>Enter p: </label>
+    <input type="number" id="p">
+    <br><br>
+    <button onclick="calculatePower()">Calculate</button>
+    <h4>Result: <span id="result"></span></h4>
+
+
+</body>
+</html>
