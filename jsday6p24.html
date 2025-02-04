@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+</head>
+<script>
+
+function fib(){
+
+   var a=-1,b=1,c,i=1;
+   while(i<=10){
+    c=a+b;
+    document.write(c+" ");
+    a=b;
+    b=c;
+    i++;
+   }
+   document.getElementById("tb2").value=sum;
+}
+</script> 
+
+<body>
+<h4>Fibonacci Series</h4>
+    <button type="submit" onclick="fib()">Fibonacci</button>
+</body>
+</html>

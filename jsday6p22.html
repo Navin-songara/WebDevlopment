@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Digits</title>
+</head>
+<script>
+
+function countdigits(){
+
+   var n,c=0;
+   n=parseInt(document.getElementById("tb1").value);
+   while(n>0){
+    c=c+1;
+    n=parseInt(n/10);
+   }
+   document.getElementById("tb2").value=c;
+}
+</script> 
+<body>
+    <h4>Count Digits</h4>
+    <table>
+        <tr>
+            <td>Enter Number</td>
+            <td>
+                <input type="text" id="tb1">
+            </td>
+        </tr>
+        
+        <tr>
+            <td>Result</td>
+            <td>
+                <input type="text" id="tb2"/>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>Click Here</td>
+            <td>
+                <button type="submit"onclick="countdigits()">Count Digits</button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

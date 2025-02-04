@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table</title>
+</head>
+
+<script>
+
+function printTable(){
+
+   var i,n,t;
+   i=1;
+   n=parseInt(document.getElementById("tb1").value);
+   while(i<=10){
+    t=n*i;
+    document.write(t+"<br>");
+    i++;
+   }
+}
+</script> 
+
+<body>
+    <h4>Print Table</h4>
+    <table>
+        <tr>
+            <td>Enter Number</td>
+            <td>
+                <input type="text" id="tb1">
+            </td>
+        </tr>
+    
+        <tr>
+            <td>Click Here</td>
+            <td>
+                <button type="submit"onclick="printTable()">Print Table</button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

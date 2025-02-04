@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+</head>
+<script>
+
+function factorial(){
+
+   var i,f=1;
+   n=parseInt(document.getElementById("tb1").value);
+   while(n>0){
+    f=f*n;
+    n--;
+   }
+   document.getElementById("tb2").value=f;
+}
+</script> 
+
+<body>
+    <h4>Factorial</h4>
+    <table>
+        <tr>
+            <td>Enter Number</td>
+            <td>
+                <input type="number" id="tb1">
+            </td>
+        </tr>
+        
+        <tr>
+            <td>Result</td>
+            <td>
+                <input type="text" id="tb2"/>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>Click Here</td>
+            <td>
+                <button type="submit"onclick="factorial()">Print Table</button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
