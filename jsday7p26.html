@@ -1,0 +1,50 @@
+<!-- Prime or not Prime -->
+<html>
+    <head>
+        <script>
+            function checkprime(){
+            var n,i=1,c=0;
+            n=parseInt(document.getElementById("tb2").value);
+            do{
+                if(n%i==0){
+                    c=c+1;
+                }
+               i++;
+            }while(i<n);
+            if(c==2){
+            document.getElementById("tb2").value="Prime";
+            
+            }else{
+                document.getElementById("tb2").value="Not Prime";
+            }
+        }
+            
+        </script>
+    </head>
+    <body>
+        <center>
+        <h4>Check Prime</h4>
+        <table border="1">
+            <tr>
+                <td>Enter Number</td>
+                <td>
+                    <input type="text" id="tb2">
+                </td>
+            </tr>
+            
+            
+            <tr>
+                <td>
+                    <button type="submit">result</button>
+                </td>
+                <td>
+                    <input type="text" id="tb3">
+                </td>
+            </tr>
+            <td>
+                <button type="submit"onclick="checkprime()">Check</button>
+            </td>
+        </table>
+        </center>
+    </body>
+ </html>
