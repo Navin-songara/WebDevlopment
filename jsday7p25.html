@@ -1,0 +1,48 @@
+<!-- Function Reverse Num -->
+ <html>
+    <head>
+        <script>
+            function reverseNum(){
+            var n,r,rev=0;
+            n=parseInt(document.getElementById("tb2").value);
+            do{
+                r=n%10;
+                rev=rev*10+r;
+                n=parseInt(n/10);
+          
+               
+            }while(n>0);
+            document.getElementById("tb23").value=rev;
+            console.log(rev)
+            }
+           
+            
+        </script>
+    </head>
+    <body>
+        <center>
+        <h4>Reverse of any number</h4>
+        <table border="1">
+            <tr>
+                <td>Enter Number</td>
+                <td>
+                    <input type="text" id="tb2">
+                </td>
+            </tr>
+            
+            
+            <tr>
+                <td>
+                    <button type="submit">result</button>
+                </td>
+                <td>
+                    <input type="text" id="tb23">
+                </td>
+            </tr>
+            <td>
+                <button type="submit"onclick="reverseNum()">reverse</button>
+            </td>
+        </table>
+        </center>
+    </body>
+ </html>
