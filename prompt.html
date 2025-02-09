@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt by Js</title>
+    <link rel="stylesheet" href="prompt.css">
+    <script>
+        function showResult(){
+            var fvalue= prompt("Enter first value:",0);
+            var svalue= prompt("Enter second value:",0);
+            var operator= prompt("Enter Operator (+,-*,/,%):");
+            if(operator==="+"){
+                document.getElementById('result').innerHTML=parseInt(fvalue)+parseInt(svalue);
+            }
+            
+            else if(operator==="-"){
+                document.getElementById('result').innerHTML=parseInt(fvalue)-parseInt(svalue);
+            }
+            
+            else if(operator==="*"){
+                document.getElementById('result').innerHTML=parseInt(fvalue)*parseInt(svalue);
+            }
+            
+            else if(operator==="/"){
+                document.getElementById('result').innerHTML=parseInt(fvalue)/parseInt(svalue);
+            }
+            
+            else if(operator==="%"){
+                document.getElementById('result').innerHTML=parseInt(fvalue)%parseInt(svalue);
+            }
+            else{
+                document.getElementById('result').innerHTML="Operator Unavailabel"
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="showResult()">Go</button>
+    <div id="result"></div>
+</body>
+</html>
