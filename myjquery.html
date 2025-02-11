@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="clk">click</button>
+    <div id="fdiv"></div>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> -->
+
+    <script src="./jquery.min.js"></script>
+
+    <!-- custom jquery -->
+    <script>
+    $('#clk').click(function(){
+        $('#fdiv').css('background','green');
+        $('#fdiv').css('height','50px');
+        $('#fdiv').css('width','50px');
+        $('#fdiv').css('borderRadius','50px');
+    });
+
+    $('#clk').dblclick(function(){
+        $('#fdiv').css('background','blue');
+        $('#fdiv').css('height','50px');
+        $('#fdiv').css('width','50px');
+        $('#fdiv').css('borderRadius','50px');
+    });
+
+    $('#clk').mouseover(function(){
+        $('#fdiv').css('background','gray');
+        $('#fdiv').css('height','50px');
+        $('#fdiv').css('width','50px');
+        $('#fdiv').css('borderRadius','50px');
+    });
+    </script>
+</body>
+</html>
