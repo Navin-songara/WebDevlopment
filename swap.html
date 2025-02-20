@@ -1,0 +1,60 @@
+
+<html>
+    <head>
+        <script>
+            function swapfun(){
+                var a,b,c;
+                a=parseInt(document.getElementById("tb1").value);
+                b=parseInt(document.getElementById("tb2").value);
+                c=a;
+                a=b;
+                b=c;
+                document.getElementById("tb3").value=a;
+                document.getElementById("tb4").value=b;
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <h4>Swapping of two numbers</h4>
+            <table border="1">
+                <tr>
+                    <td>Enter first number</td>
+                    <td>
+                        <input type="text" id="tb1">
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>Enter second number</td>
+                    <td>
+                        <input type="text" id="tb2">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Click Here</td>
+                    <td>
+                        <button type="submit" onclick="swapfun()">Swap
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>after swap a  number</td>
+                    <td>
+                        <input type="text" id="tb3">
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>After swap b  number</td>
+                    <td>
+                        <input type="text" id="tb4">
+                    </td>
+                </tr>
+
+            </table>
+        </center>
+    </body>
+</html>
