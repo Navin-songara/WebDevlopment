@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Area Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+            width: 50%;
+        }
+        td {
+            padding: 10px;
+            border: 1px solid black;
+        }
+        input {
+            padding: 5px;
+            width: 100%;
+        }
+        button {
+            padding: 8px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function calculateCircleArea() {
+            var r = parseFloat(document.getElementById("tb1").value);
+
+            if (isNaN(r) || r <= 0) {
+                alert("Please enter a valid positive number for radius.");
+                return;
+            }
+
+            var area = Math.PI * Math.pow(r, 2);
+            document.getElementById("tb2").value = area.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Circle Area Calculator</h2>
+
+    <table>
+        <tr>
+            <td>Enter the value of Radius</td>
+            <td><input type="text" id="tb1"></td>
+        </tr>
+        <tr>
+            <td>Result (Area)</td>
+            <td><input type="text" id="tb2" readonly></td>
+        </tr>
+        <tr>
+            <td>Click Here</td>
+            <td><button onclick="calculateCircleArea()">Calculate Area</button></td>
+        </tr>
+    </table>
+
+</body>
+</html>

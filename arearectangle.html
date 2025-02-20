@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle Area Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+            width: 50%;
+        }
+        td {
+            padding: 10px;
+            border: 1px solid black;
+        }
+        input {
+            padding: 5px;
+            width: 100%;
+        }
+        button {
+            padding: 8px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function calculateRectangleArea() {
+            var length = parseFloat(document.getElementById("tb1").value);
+            var width = parseFloat(document.getElementById("tb2").value);
+
+            if (isNaN(length) || isNaN(width) || length <= 0 || width <= 0) {
+                alert("Please enter valid positive numbers for length and width.");
+                return;
+            }
+
+            var area = length * width;
+            document.getElementById("tb3").value = area.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Rectangle Area Calculator</h2>
+
+    <table>
+        <tr>
+            <td>Enter the value of Length</td>
+            <td><input type="text" id="tb1"></td>
+        </tr>
+        <tr>
+            <td>Enter the value of Width</td>
+            <td><input type="text" id="tb2"></td>
+        </tr>
+        <tr>
+            <td>Result (Area)</td>
+            <td><input type="text" id="tb3" readonly></td>
+        </tr>
+        <tr>
+            <td>Click Here</td>
+            <td><button onclick="calculateRectangleArea()">Calculate Area</button></td>
+        </tr>
+    </table>
+
+</body>
+</html>
