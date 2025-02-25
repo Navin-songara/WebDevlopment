@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort List using Bubble Sort</title>
+</head>
+<body>
+
+    <h2>Unsorted List</h2>
+    <ul id="myList">
+        <li>Banana</li>
+        <li>Apple</li>
+        <li>Orange</li>
+        <li>Grapes</li>
+        <li>Mango</li>
+    </ul>
+
+    <button onclick="sortList()">Sort List</button>
+
+    <script>
+        function bubbleSort(arr) {
+            let n = arr.length;
+            for (let i = 0; i < n - 1; i++) {
+                for (let j = 0; j < n - i - 1; j++) {
+                    if (arr[j].innerText > arr[j + 1].innerText) {
+                        // Swap elements
+                        let temp = arr[j].innerText;
+                        arr[j].innerText = arr[j + 1].innerText;
+                        arr[j + 1].innerText = temp;
+                    }
+                }
+            }
+        }
+
+        function sortList() {
+            let list = document.getElementById("myList");
+            let items = Array.from(list.getElementsByTagName("li"));
+            bubbleSort(items);
+        }
+    </script>
+
+</body>
+</html>
