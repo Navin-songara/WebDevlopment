@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection Sort</title>
+</head>
+<body>
+
+    <h2>Enter numbers separated by commas</h2>
+    <input type="text" id="numberInput" placeholder="e.g., 5, 3, 8, 1, 2">
+    <button onclick="sortNumbers()">Sort</button>
+
+    <h3>Sorted Numbers:</h3>
+    <p id="sortedOutput"></p>
+
+    <script>
+        function selectionSort(arr) {
+            let n = arr.length;
+            for (let i = 0; i < n - 1; i++) {
+                let minIndex = i;
+                for (let j = i + 1; j < n; j++) {
+                    if (arr[j] < arr[minIndex]) {
+                        minIndex = j; // Update the index of the minimum element
+                    }
+                }
+                // Swap elements
+                [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
+            }
+            return arr;
+        }
+
+        function sortNumbers() {
+            let input = document.getElementById("numberInput").value;
+            let numArray = input.split(',').map(num => parseInt(num.trim())).filter(num => !isNaN(num));
+
+            if (numArray.length === 0) {
+                document.getElementById("sortedOutput").innerText = "Please enter valid numbers!";
+                return;
+            }
+
+            let sortedArray = selectionSort(numArray);
+            document.getElementById("sortedOutput").innerText = sortedArray.join(", ");
+        }
+    </script>
+
+</body>
+</html>
