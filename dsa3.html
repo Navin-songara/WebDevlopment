@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number Checker</title>
+</head>
+<body>
+
+    <h2>Check if a Number is Prime</h2>
+    <input type="number" id="numInput" placeholder="Enter a number">
+    <button onclick="checkPrime()">Check</button>
+
+    <h3>Result:</h3>
+    <p id="primeResult"></p>
+
+    <script>
+        function sieveOfEratosthenes(n) {
+            if (n < 2) return false; // Prime numbers start from 2
+
+            let primes = new Array(n + 1).fill(true);
+            primes[0] = primes[1] = false; // 0 and 1 are not prime
+
+            for (let i = 2; i * i <= n; i++) {
+                if (primes[i]) {
+                    for (let j = i * i; j <= n; j += i) {
+                        primes[j] = false;
+                    }
+                }
+            }
+            return primes[n]; // Return if n is prime
+        }
+
+        function checkPrime() {
+            let num = parseInt(document.getElementById("numInput").value);
+            let result = document.getElementById("primeResult");
+
+            if (isNaN(num) || num < 1) {
+                result.innerText = "Please enter a valid positive number!";
+                return;
+            }
+
+            if (sieveOfEratosthenes(num)) {
+                result.innerText = `${num} is a Prime Number ✅`;
+            } else {
+                result.innerText = `${num} is NOT a Prime Number ❌`;
+            }
+        }
+    </script>
+
+</body>
+</html>
