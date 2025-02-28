@@ -1,0 +1,45 @@
+<!-- 
+while loop :-
+syntax :-
+intialization:
+while(condition)
+{
+    statement;
+    ..
+    ..
+    loop controlling 
+}
+-->
+<html>
+    <head>
+        <script>
+            function digitSum()
+            {
+                var n,r,s=0;
+                n=parseInt(document.getElementById("tb1").value);
+                while(n>0)
+                {
+                    r=n%10;
+                    s=s+r;
+                    n=parseInt(n/10);
+
+                }
+                document.getElementById("tb2").value=s;
+            }
+        </script>
+    </head>
+    <body>
+        <p>Enter Any Number <input type="text" id="tb1" /></p>
+        <p>Result Sum of digits <input type="text" id="tb2" /></p>
+        <p>
+            <button type="submit" onclick="digitSum()">Sum</button>
+        </p>
+    </body>
+</html>
+
+<!-- 
+find reverse of any number 
+check prime or not prime 
+calculate factorial
+calculate n power p
+-->
