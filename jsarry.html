@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even Numbers</title>
+</head>
+<body>
+
+    <button onclick="displayEvenNumbers()">Show Even Numbers</button>
+    <p id="result"></p>
+
+    <script>
+        function displayEvenNumbers() {
+            var numbers = [12, 7, 19, 24, 8, 33, 42, 55, 60, 71];
+            var evenNumbers = numbers.filter(function(num) {
+                return num % 2 === 0;
+            });
+            document.getElementById("result").innerText = "Even Numbers: " + evenNumbers.join(", ");
+        }
+    </script>
+
+</body>
+</html>

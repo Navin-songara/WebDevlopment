@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Smallest Number</title>
+</head>
+<body>
+    <button onclick="findSmallestNumber()">Find Smallest Number</button>
+    <p id="result"></p>
+
+    <script>
+        function findSmallestNumber() {
+            var numbers = [12, 7, 19, 24, 8, 33, 42, 55, 60, 71];
+            var smallest = Math.min.apply(null, numbers);
+            document.getElementById("result").innerText = "Smallest Number: " + smallest;
+        }
+    </script>
+
+</body>
+</html>
