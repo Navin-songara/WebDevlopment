@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd Numbers</title>
+</head>
+<body>
+
+    <h3>Enter 10 numbers separated by commas:</h3>
+    <input type="text" id="numbers" placeholder="e.g. 5, 12, 17, 8, 19, 21, 6, 3, 11, 9">
+    <button onclick="displayOddNumbers()">Show Odd Numbers</button>
+    <p id="result"></p>
+
+    <script>
+        function displayOddNumbers() {
+            var input = document.getElementById("numbers").value;
+            var numbers = input.split(",").map(Number); // Convert input into an array of numbers
+            
+            // Validation: Check if 10 numbers are entered
+            if (numbers.length !== 10 || numbers.includes(NaN)) {
+                document.getElementById("result").innerText = "Please enter exactly 10 valid numbers.";
+                return;
+            }
+
+            var oddNumbers = numbers.filter(function(num) {
+                return num % 2 !== 0;
+            });
+
+            document.getElementById("result").innerText = "Odd Numbers: " + (oddNumbers.length ? oddNumbers.join(", ") : "None found");
+        }
+    </script>
+
+</body>
+</html>
