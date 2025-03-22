@@ -1,0 +1,26 @@
+<html>
+    <script>
+        function show() {
+            var a = [5, 7, 4, 10, 20, 9, 12, 7, 4, 8];
+            
+            // Access array elements using a loop
+            document.write("<br>Output using loop:<br>");
+            for (var i = 0; i < a.length; i++) {
+                document.write(a[i] + " ");
+            }
+
+            // Direct access to array
+            document.write("<br>Direct output:<br>" + a);
+
+            // Access using forEach loop
+            document.write("<br>Output using forEach loop:<br>");
+            a.forEach(function(element) {
+                document.write(element + " ");
+            });
+        }
+    </script>
+    <head></head>
+    <body>
+        <button type="submit" onclick="show()">Show</button>
+    </body>
+</html>
