@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script>
+            function show() {
+                var a = [[5, 7, 2, 9], [1, 7, 9, 2], [7, 5, 4, 1]];
+                var i, j;
+
+                for (i = 0; i < a.length; i++) {
+                    for (j = 0; j < a[i].length; j++) {
+                        document.write(a[i][j] + " ");
+                    }
+                    document.write("<br>"); // New line after each inner array
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <button type="submit" onclick="show()">Show</button>
+    </body>
+</html>
