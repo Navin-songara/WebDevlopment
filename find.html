@@ -1,0 +1,23 @@
+<!-- the find() method of an array js object finds the first element in the array 
+that satisties a specified test or condition and returns that element.
+-->
+<html>
+    <head>
+        <script>
+            function show1(){
+                var a=[5,81,22,3,7,6,12,56,8,17];
+                document.write("Find Function Result"+a.find(check));
+            }
+            function check(n)
+            {
+                if(n%2==0)
+            {
+                return n
+            }
+            }
+        </script>
+    </head>
+    <body>
+        <button type="submit"onclick="show1()">Find Function</button>
+    </body>
+</html>
