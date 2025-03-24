@@ -1,0 +1,32 @@
+<!-- spread function or three dot function :-- we can pass any number of arguments in this
+function .
+
+syntax:- 
+function functionName(...argument Name)
+{
+. . . .
+. . . .
+}
+-->
+<html>
+    <head>
+        <script>
+            function sum(...a)
+            {
+                var i,s=0;
+                for (i=0;i<a.length;i++)
+            {
+                document.write(a[i]+" ");
+                s=s+a[i]
+            }
+            document.write("<br>sum"+s);
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="sum()">without argument</button>
+        <button onclick="sum(5)">with one argument</button>
+        <button onclick="sum(5,8)">with two argument</button>
+        <button onclick="sum(5,10,20)">with three argument</button>
+    </body>
+</html>
