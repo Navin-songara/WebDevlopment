@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script>
+            function show() {
+                var mylist = [
+                    {rno: 101, sname: "Anjali", marks: 450},
+                    {rno: 102, sname: "Raj", marks: 490},
+                    {rno: 103, sname: "Amit", marks: 350},
+                    {rno: 104, sname: "Amit", marks: 420}
+                ];
+
+                mylist.map((item) => {
+                    document.write(item.rno + " " + item.sname + " " + item.marks + "<br>");
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <button type="submit" onclick="show()">Show</button>
+    </body>
+</html>
