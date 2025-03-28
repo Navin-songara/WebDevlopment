@@ -1,0 +1,97 @@
+<!--
+Event propagation:- determines in which order the elements receive the event.There are two 
+ways to handle this event propagation order of HTML DOM  is Event Bubbling and Event
+capturing.
+
+1.Bubbling :- When an event happens on a component. it first runs the event handler on it. 
+then on its parent component,then all they way on other ancestors'k components.By defualt 
+all eventhandles through this order form center component event to outermost component
+event.
+
+2.Capturing:- 
+it is the opposites of bubbling. The event handler is first on its parent component and
+then on the component where it was actually wanted to fire that even handler. in short, it
+means that the event is first capture by the outermost element and propagated to the inner
+elements. it is also called tricks down.
+
+
+parameters of addListner Method :- 
+addEventListner type , listner , useCapture
+
+ type :- Use to refer to the type of event.
+  listner :- Function we want to call when the event of the specified type occurs.
+   useCapture:- boolean value. The boolean value indicates the event phase. By Default
+useCapture is false. it mean it is the bubbling phase.
+-->
+
+<!-- bubbling demo -->
+ <html>
+    <head>
+        <style>
+            #div1 {
+                background-color: lightgreen;
+                padding: 24px;
+                border: 1 px solid black;
+            }
+            
+            #div2 {
+                background-color: yellow;
+                padding: 18px;
+                border: 1 px solid black;
+            }
+            
+            #div3 {
+                background-color: orange;
+                border: 1 px solid black;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <h1 style="color:green">Universal informatics Indore</h1>
+        <h1>Example Event Propagation bubbling</h1>
+
+        <div id="div1">
+            component 1
+            <div id="div2">
+                component 2
+                <div id="div3">
+                    component 3
+                </div>
+            </div>
+        </div>
+        <script>
+            let div1 = document.querySelector("#div1");
+            let div2 = document.querySelector("#div2");
+            let div3 = document.querySelector("#div3");
+
+            div1.addEventListener("click",function(event){
+                alert("component 1 event clicked");
+            });
+            
+            div2.addEventListener("click",function(event){
+                alert("component 2 event clicked");
+            });
+
+            
+            div3.addEventListener("click",function(event){
+                alert("component 3 event clicked");
+            });
+
+            // div1.addEventListener("click",function(event){
+            //     alert("component 1 event clicked");
+            // },true);
+            
+            // div2.addEventListener("click",function(event){
+            //     alert("component 2 event clicked");
+            // },true);
+
+            
+            // div3.addEventListener("click",function(event){
+            //     alert("component 3 event clicked");
+            // },true);
+        </script>
+    </body>
+ </html>
+
