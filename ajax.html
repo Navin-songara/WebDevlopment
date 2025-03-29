@@ -1,0 +1,46 @@
+<!-- AJAX :- asynchronous java script and xml .
+ajax is used to send patial request form client to server and recieve response form server 
+to client.
+AJAX Provide some predefined function like:-
+1. XHMLHTTP Request :- it is inbuilt class
+and used to send request form client to server
+functions availabel in this class :-
+
+2.open() :- inbuilt function used to connect any file or webapl to get response.
+3.send() :- inbuilt function to send response to client
+4.onreadystatechange:-inbuilt property,used to check
+document or web application state is ready or not for reading data.
+if end point is in ready condition it returns 4,means 4 is ready state code.and 200 is 
+OK code end point is successfully return response.
+-->
+
+<!-- AJAX examples to load json data -->
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="demo">
+            <h1>Lead Data</h1>
+            <button type="button" onclick="loadDoc()">Change Code</button>
+        </div>
+
+        <script>
+            function loadDoc(){
+                var xhttp = new XMLHttpRequest(); // Create object
+                
+                // Define behavior when the request state changes
+                xhttp.onreadystatechange = function() {
+                    // Check if the request is completed and successful
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("demo").innerHTML = this.responseText;
+                    }
+                };
+
+                // Open the request, providing the URL and method (GET)
+                xhttp.open("GET", "https://projects.fivethirtyeight.com/2020.nfl.predictions", true);
+
+                // Send the request
+                xhttp.send();
+            }
+        </script>
+    </body>
+</html>
