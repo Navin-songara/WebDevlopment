@@ -1,0 +1,23 @@
+<html>
+<body id="bd1">
+  <button type="submit" id="btnl">Submit</button>
+  <p id="p1">Event Handling Programming Demo</p>
+  <script>
+    document.getElementById("btnl").onmouseover = function() { mouseOver(); };
+    document.getElementById("btnl").onmouseout = function() { mouseOut(); };
+
+    function mouseOver() {
+      document.getElementById("btnl").style.color = "Purple";
+      document.getElementById("btnl").style.backgroundColor = "Orange";
+      document.getElementById("p1").style.color = "Yellow";
+      document.getElementById("bd1").style.backgroundColor = "Green";
+    }
+
+    function mouseOut() {
+      document.getElementById("p1").style.color = "Black";
+      document.getElementById("btnl").style.backgroundColor = "Green";
+      document.getElementById("bd1").style.backgroundColor = "Red";
+    }
+  </script>
+</body>
+</html>
