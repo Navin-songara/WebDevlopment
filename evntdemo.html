@@ -1,0 +1,35 @@
+<!-- event handling or event programming:-event handling is the process to define
+user defined event on a element or used to create custome event handler to manage 
+custome event handling is provides some predefined functions Like addEventListner 
+function it manage custome event. 
+querySelector() function used to find out htel element in DOM. 
+ -->
+<!-- example even handling --> 
+<html>
+<head>
+<title>Welcome</title>
+</head>
+<body>
+<h4>Event Handling Demo</h4>
+<div id="mydiv1" style="background-color: brown;">Welcome this is my first component</div>
+<p></p>
+<button id="mybtn1">Submit</button>
+
+<script>
+    // Select the div and button elements
+    var div1 = document.querySelector("#mydiv1");
+    var btn1 = document.querySelector("#mybtn1");
+
+    // Add an event listener to the div
+    div1.addEventListener("click", function(evt) {
+        alert("You have clicked on the first component");
+    });
+
+    // Add an event listener to the button
+    btn1.addEventListener("click", function(evt) {
+        alert("You have clicked on the button component");
+    });
+</script>
+
+</body>
+</html>
