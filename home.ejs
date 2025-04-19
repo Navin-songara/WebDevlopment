@@ -1,0 +1,60 @@
+<!-- HOME.ejs
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME PAGE</title>
+    <style type="text/css" media="screen">
+        body{
+            background-color: skyblue;
+            text-decoration: white;
+            font-size: 5cm;
+        }
+
+    </style>
+</head>
+<body>
+    Details:-
+        <p>ID:-<%=data.id> </p>
+        <p>Name:- <%=data.name%> </p>
+        <p>Hoobies :-<br>
+                <ul>
+                    <% data.hobbies.forEach((item)=>{%>
+                    <li>
+                        <%=item%>
+                    </li>
+                    <%});%>
+                </ul>
+                </p>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME PAGE</title>
+    <style>
+        body {
+            background-color: skyblue;
+            color: white;
+            font-size: 2rem;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Details:</h1>
+    <p>ID: <%= data.id %></p>
+    <p>Name: <%= data.name %></p>
+    <p>Hobbies:</p>
+    <ul>
+        <% data.hobbies.forEach(item => { %>
+            <li><%= item %></li>
+        <% }) %>
+    </ul>
+</body>
+</html>
