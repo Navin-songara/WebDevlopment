@@ -1,16 +1,14 @@
-var express = require('express');
-var app = express();
-const PORT = 6777;
+                    // EJS - Embedded JavaScript
+// EJS is a templating engine for Node.js.
+// used to generate HTML markup with plan JavaSript.
+// it is specially useful for creating dynamic web pages.
+// it enables to embed Javascript logic directly with your HTML.
+// helps to create an HTML template with minimal code 
+// it also helps to create an HTML template with minimal code
+// it also helps to embed JavaScript into html pages
 
-app.get("/", (req, res) => {
-    res.send("This Is my First Express Application");
-    res.end();
-});
-
-app.get("/student", (req, res) => {
-    res.end();
-});
-
-app.listen(PORT, () => {
-    console.log("Server is running in port " + PORT);  // Fixed string concatenation
-})
+// STEPS:-
+// 1. npm install express ejs --save
+// 2. Create views named folder
+// 3. Create html pages in views folder
+// 4. Create app.js file
