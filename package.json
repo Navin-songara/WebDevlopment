@@ -1,7 +1,7 @@
 {
-  "name": "express0",
+  "name": "student.html",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index6.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +10,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "body": "^5.1.0",
+    "body-parser": "^2.2.0",
     "cors": "^2.8.5",
     "express": "^5.1.0"
   }
