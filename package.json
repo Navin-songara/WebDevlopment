@@ -1,7 +1,7 @@
 {
-  "name": "student.html",
+  "name": "texthtml",
   "version": "1.0.0",
-  "main": "index6.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,8 +10,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "body-parser": "^2.2.0",
-    "cors": "^2.8.5",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "nodemon": "^3.1.9"
   }
 }
