@@ -1,104 +1,61 @@
-// // npm install multer --save :- multer library provides functions 
-// // to upload file from client to server, it provides functions to store file at server.
+// load file in response :- express js provide functionality to return a file form 
+// server to client means we can return a static file in response
 
-// // Image/file Uploading and downloading from client to server 
+// import express from'express';
+// import path, { dirname } from 'path';
 
-// const fs = require('fs');
-// const express = require('express');
-// const app = express();
-// const bodyParser = require('body-parser');
-// const PORT = 5040;
-// const cors =require('cors');
-// const multer=require("multer");
-// const { request } = require('http');
-// app.use(cors());
-// app.use(bodyParser.urlencoded({extended: true}));
-// app.use(bodyParser.json());
-// // code save image to server
-// // diskstorage():- function used to store file in server side permanent memory.
-// const st = multer.diskStorage({  
-//     destination:(req,file,cb)=> {
-//         cb(null, 'myimages/')  //set path of folder or directory
-//     },
-// }) ;
-// filename: (req, file, cb)=>{ //get file name form requestbody
-    
-//     cb(null,file.originalname)
-// }
-// const upload = multer({storage: st});//store
-// app.post('/Uploadimage',upload.single('file'),(req,res)=>
-// {
-//     res.send("File Uploaded Successfully");
+// // path library provides function to read path of web application directory 
+
+// import { fileURLToPath } from 'url';
+
+// //fileURLToPATH :- used to read url 
+
+// var app=express();
+
+// app.use(express.static('public'));
+// app.listen(3000,()=>{
+//     console.log("Server running on port 3000");
+// });
+// app.get("/",(req,res)=>{
+//     res.send("Hello MERN Programming World:");
 //     res.end();
 // });
+// app.get("Showfile",(req,res,next)=>{
+//     const filename=fileURLToPath(import.meta.url);
 
-// app.get("/getimage/:picname",(req,res)=>{
-//     const fullPath="C:\Users\navin\OneDrive\Desktop\New folder\HTML.practice\js.html\expresss.js\myimages.js";
-//     res.sendFile(fullPath+req.params.picname);
-// })
+//     const dis name=path.dirname(--filename);
 
-// app.listen(PORT,function(){
-//     console.log('Server is running on PORT:',PORT),
-// })
+//     const retfile=path.join(--dirname,'text.html');
 
-// npm install multer --save
-// Multer is used to handle file uploads from client to server.
+//     res.sendFile(.retfile);
+// });
 
-const fs = require('fs');
-const express = require('express');
+import express from 'express';
+import path, { dirname } from 'path';
+import { fileURLToPath } from 'url';
+
 const app = express();
-const bodyParser = require('body-parser');
-const cors = require('cors');
-const multer = require("multer");
-const path = require('path');
 
-const PORT = 5040;
+// Convert URL to file path
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
-// Middleware
-app.use(cors());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+// Middleware to serve static files from "public" directory
+app.use(express.static('public'));
 
-// Create 'myimages' folder if it doesn't exist
-const uploadDir = path.join(__dirname, 'myimages');
-if (!fs.existsSync(uploadDir)) {
-    fs.mkdirSync(uploadDir);
-}
-
-// Multer disk storage configuration
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, uploadDir); // Directory where files will be stored
-    },
-    filename: (req, file, cb) => {
-        cb(null, file.originalname); // Use original file name
-    }
+// Start the server
+app.listen(3000, () => {
+  console.log("Server running on port 3000");
 });
 
-const upload = multer({ storage: storage });
-
-// ------------------ Upload Route ------------------
-app.post('/uploadimage', upload.single('file'), (req, res) => {
-    if (!req.file) {
-        return res.status(400).send('No file uploaded.');
-    }
-    res.send("File Uploaded Successfully");
+// Route for "/"
+app.get("/", (req, res) => {
+  res.send("Hello MERN Programming World!");
 });
 
-// ------------------ Download Route ------------------
-app.get("/getimage/:picname", (req, res) => {
-    const imagePath = path.join(uploadDir, req.params.picname);
-
-    // Check if the file exists
-    fs.access(imagePath, fs.constants.F_OK, (err) => {
-        if (err) {
-            return res.status(404).send("Image not found.");
-        }
-        res.sendFile(imagePath);
-    });
+// Route to show a file
+app.get("/showfile", (req, res) => {
+  const retfile = path.join(__dirname, 'text.html');
+  res.sendFile(retfile);
 });
 
-// ------------------ Start Server ------------------
-app.listen(PORT, () => {
-    console.log(`Server is running on PORT: ${PORT}`);
-});
