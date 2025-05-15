@@ -4,7 +4,7 @@
 // npm :-node package manager:-npm is a tool which is used to manage libraries and packages for nodejs. 
 // with the help of npm we can install libraries. 
 // npm provides the setup for node execution.
-
+//just for visualising
 // Read User Input 
 const readline = require('readline').createInterface({ 
     input: process.stdin, 
