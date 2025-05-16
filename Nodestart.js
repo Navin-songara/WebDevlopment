@@ -6,6 +6,7 @@
 // npm provides the setup for node execution.
 //just for visualising
 // Read User Input 
+//this is initial code
 const readline = require('readline').createInterface({ 
     input: process.stdin, 
     output: process.stdout, 
