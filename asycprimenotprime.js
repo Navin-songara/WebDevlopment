@@ -1,4 +1,5 @@
 // example 3 asychronize programing check prime or not prime
+//asychronize program 
 const check = (n) => {
     return new Promise((resolve) => {
         setTimeout(() => {
