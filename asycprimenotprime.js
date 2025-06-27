@@ -1,3 +1,4 @@
+// asyc prime or not prime
 // example 3 asychronize programing check prime or not prime
 //asychronize program 
 const check = (n) => {
