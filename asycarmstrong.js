@@ -1,3 +1,4 @@
+//asy armstrong 
 const { rejects } = require("assert");
 
 // Example: Check Armstrong using non-blocking or asynchronous approach
