@@ -1,3 +1,4 @@
+// By if and else
 // Example check even or odd using non blocking or asynchronize.
 
 const check = (num) => {
