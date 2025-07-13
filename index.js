@@ -1,6 +1,6 @@
 // routing :used to path of web pages of web application. routing manage the refernces of web page. it save response time.
 // every seraching
-
+// index 
 var express=require("express");
 var app=express();
 var router=express.Router(); //Router():- function provide functionality to define routing
