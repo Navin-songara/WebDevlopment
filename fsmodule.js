@@ -3,6 +3,7 @@
 // fs is inbuilt module.
 
 // functions:- 
+// functions :-
 // 1.writeFile():- used to write data
 // 2.readFile():-used to read data in file.
 
