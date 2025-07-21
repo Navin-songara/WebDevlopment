@@ -1,3 +1,4 @@
+// factorial and synchronisation 
 const factorial = (num) => {
     return new Promise((resolve, reject) => {
         if (typeof num === 'number') {
