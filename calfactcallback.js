@@ -1,3 +1,4 @@
+
 // Calculate factorial using callback function
 
 function mainFunction(fact) {
