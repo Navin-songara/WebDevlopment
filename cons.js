@@ -1,3 +1,4 @@
+// Constructor
 // Constructor and inheritance :- if we define constructor in base and derived classes and create object of derived class base class constructor always execute before the derived class constructor .
 // Explain defualt constructor with single inheritance 
 // Base class
